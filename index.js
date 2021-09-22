@@ -1,5 +1,4 @@
 const express = require('express');
-const pino = require('express-pino-logger')();
 const audit = require('express-requests-logger');
 const cors = require('cors');
 const dotenv = require('dotenv');
