@@ -15,6 +15,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
 
 // logger
 app.use(
@@ -25,7 +26,7 @@ app.use(
       maskBody: ['password'], // Mask 'password' field in incoming requests
       excludeHeaders: ['authorization'], // Exclude 'authorization' header from requests
       excludeBody: ['creditCard'], // Exclude 'creditCard' field from requests body
-      maskHeaders: ['*'], // Mask 'header1' header in incoming requests
+      maskHeaders: ['*'],
       maxBodyLength: 50, // limit length to 50 chars + '...'
     },
     response: {
